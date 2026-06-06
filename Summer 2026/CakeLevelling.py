@@ -5,19 +5,15 @@ def solve():
     n = int(input())
     a = list(map(int, input().split()))
 
-    sumOfFrosts = 0
     bottleneck = float('inf')
+    sumOfFrostings = 0
+    bottlenecks = []
 
-    for i in range(1, n+1):
-        sumOfFrosts += a[i-1]
-        maxHeight = sumOfFrosts // i
-        
-        bottleneck = min(bottleneck, maxHeight)
-        h = bottleneck
-        print(h, end=' ')
-    print()
-
-
+    for i in range(n):
+        sumOfFrostings += a[i]
+        bottleneck = min(bottleneck, sumOfFrostings // (i+1))
+        bottlenecks.append(bottleneck)
+    print(*bottlenecks)
 
 t = int(input())
 for _ in range(t): solve()

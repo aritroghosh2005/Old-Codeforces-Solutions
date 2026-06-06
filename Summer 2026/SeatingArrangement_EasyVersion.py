@@ -17,7 +17,7 @@ def solve():
             if dp[j] == -1: continue
 
             if person == 'I' or person == 'A':
-                if j + 1 <= x: 
+                if j < x: 
                     newDP[j+1] = max(newDP[j+1], dp[j] + 1)
 
             if person == 'E' or person == 'A':
