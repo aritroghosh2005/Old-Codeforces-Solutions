@@ -1,3 +1,4 @@
+# This is the most efficient version and still not working. Got to try it using CPP now
 import sys
 input = lambda : sys.stdin.readline().rstrip()
 MOD = 10**9 + 7
